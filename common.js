@@ -1,4 +1,4 @@
-console.clear();
+
 function MobileTopBar__init() {
   $('.mobile-top-bar__btn-toggle-side-bar').click(function() {
     let $this = $(this);
