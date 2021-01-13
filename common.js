@@ -90,3 +90,22 @@ function EditorViewer__init() {
 EditorViewer__init();
 
 /* 토스트 UI 끝 */
+
+/* 커서 시작 */
+
+const $cursor = $('.cursor');
+const $cursorSahdow = $('.cursor-shadow');
+
+$(window).mousemove(function(e) {
+  $cursor.css({
+    top:e.clientY,
+    left:e.clientX
+  });
+  
+  $cursorSahdow.css({
+    top:e.clientY,
+    left:e.clientX
+  });
+});
+
+/* 커서 끝 */

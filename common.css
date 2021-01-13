@@ -116,6 +116,7 @@
   }
 
   /* 라이브러리 끝 */
+
   
   /* 커스텀 시작 */
   :root {
@@ -129,6 +130,39 @@
   .con {
     max-width: var(--site-width);
   }
+
+  /*커서 시작*/
+  *{
+    cursor:none;
+  }
+
+  .cursor{
+    position:fixed;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:white;
+    pointer-events:none;
+    transform:translateX(-50%)translateY(-50%);
+    mix-blend-mode:difference;
+  }
+
+  .cursor-shadow{
+    position:fixed;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:white;
+    pointer-events:none;
+    transform:translateX(-50%)translateY(-50%);
+    transition:top .3s, left .3s;
+    mix-blend-mode:difference;
+  }
+
+  .body-content{
+    background-color:white;
+  }
+  /*커서 끝*/
 
   /* 로고 시작 */
 .logo {
