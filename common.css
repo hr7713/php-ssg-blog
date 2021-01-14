@@ -339,3 +339,9 @@
     width: 100%;
   }
   
+
+  .svgs {
+    width:0;
+    height:0;
+    overflow:hidden;
+  }
