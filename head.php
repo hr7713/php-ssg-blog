@@ -32,8 +32,8 @@
 <script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js" defer></script>
 <!-- 토스트 UI 끝 -->
 
-<link rel="stylesheet" href="common.css">
-<script src="common.js"defer></script>
+<link rel="stylesheet" href="css/common.css">
+<script src="js/common.js"defer></script>
 
 </head>
 
