@@ -4,6 +4,7 @@ $originFiles = [
 
     "index.ssghtml.php",
     "about.ssghtml.php",
+    "pf.ssghtml.php",
 ];
 
 foreach ($originFiles as $index=>$originFile){
