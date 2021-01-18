@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹 디자이너 블로그</title>
+  <title><?=$siteTitle?></title>
 
   <!-- 반응형 필수 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
