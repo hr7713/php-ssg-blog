@@ -321,6 +321,14 @@ a {
 
 /* 모바일 사이드바 끝 */
 
+/* 하단 바*/
+
+.bottom-bar{
+  margin-top:20px;
+  padding:20px;
+  background-color:pink;
+}
+
 /* 커스텀 끝 */
 
 .toast-ui-youtube-plugin-wrap {
