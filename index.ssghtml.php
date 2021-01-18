@@ -23,127 +23,40 @@ require_once "head.php";
       <div class="article-list-box">
         <ul>
           <li>
-            <h1>자바스크립트 사용법</h1>
-            <div>2021-01-12 12:12:14</div>
+            <h1><a href="article_detail_1.ssghtml.php"><?=$article1["title"]?></a></h1>
+            <div><?=$article1["year"]?></div>
             <script type="text/x-template">
-     # 자바스크립트 사용법
-```html
-<<!--REPLACE:script-->>
-var a =10;
-</<!--REPLACE:script-->>
-<div class="a"></div>
-```
+            <?=$article1["body"]?>
             </script>
             <div class="toast-ui-viewer"></div>
           </li>
           <li>
-            <h1>자바스크립트 사용법</h1>
-            <div>2021-01-12 12:12:14</div>
+            <h1><a href="article_detail_2.ssghtml.php"><?=$article2["title"]?></a></h1>
+            <div><?=$article2["year"]?></div>
             <div>
               <script type="text/x-template">
-                # HTML h1 사용법
-```codepen
-https://codepen.io/hr7713/embed/GRjYRGG?height=500&theme-id=light&default-tab=html,result
-```
-```youtube
-OMBjyeSJLqY
-```
+              <?=$article2["body"]?>
               </script>
               <div class="toast-ui-viewer"></div>
             </div>
           </li>
 
           <li>
-            <h1 class="title">2화, CSS DINER</h1>
-            <div class="reg-date">2020-01-12 12:12:14</div>
+            <h1 class="title"><?=$article3["title"]?></h1>
+            <div class="reg-date"><?=$article3["year"]?></div>
             <div class="body">
               <script type="text/x-template">
-# 선택자 #id | A B | #id A
-```html
-3.
-<not-element-just-cssdiner-title-3 class="Select-the-fancy-plate #id">하늘색 테두리 접시 1개 반응</not-element-just-cssdiner-title-3>
-
-<div class="table">
-<plate id="fancy" />
-<plate />
-<bento />
-</div>
-
-<not-element-just-cssdiner-answer-3 class="Select-the-fancy-plate #id">#fancy</not-element-just-cssdiner-answer-3>
-
-4.
-<not-element-just-cssdiner-title-4 class="Select-the-apple-on-the-plate A B">접시 위 사과 반응</not-element-just-cssdiner-title-4>
-
-<div class="table">
-<bento />
-<plate>
-  <apple />
-</plate>
-<apple />
-</div>
-
-<not-element-just-cssdiner-answer-4 class="Select-the-apple-on-the-plate A B">plate apple</not-element-just-cssdiner-answer-4>
-
-5.
-<not-element-just-cssdiner-title-5 class="Select-the-pickle-on-the-fancy-plate #id A">하늘색 테두리 접시 위 피클 반응</not-element-just-cssdiner-title-5>
-
-<div class="table">
-<bento>
-  <orange />
-</bento>
-<plate id="fancy">
-  <pickle />
-</plate>
-<plate>
-  <pickle />
-</plate>
-</div>
-
-<not-element-just-cssdiner-answer-5 class="Select-the-pickle-on-the-fancy-plate #id A">#fancy pickle</not-element-just-cssdiner-answer-5>
-
-
-
-
-
-
-```
+              <?=$article3["body"]?>
               </script>
               <div class="toast-ui-viewer"></div>
             </div>
           </li>
           <li>
-            <h1 class="title">1화, CSS DINER</h1>
-            <div class="reg-date">2020-01-12 12:12:14</div>
+            <h1 class="title"><?=$article4["title"]?></h1>
+            <div class="reg-date"><?=$article4["year"]?></div>
             <div class="body">
               <script type="text/x-template">
-# 선택자 A
-```html
-1.
-<not-element-just-cssdiner-title-1 class="Select-the-plates A">접시 2개 반응</not-element-just-cssdiner-title-1>
-
-<div class="table">
-<plate />
-<plate />
-</div>
-
-<not-element-just-cssdiner-answer-1 class="Select-the-plates A">plate</not-element-just-cssdiner-answer-1>
-
-2.
-<not-element-just-cssdiner-title-2 class="Select-the-bento-boxes A">도시락 박스 2개 반응</not-element-just-cssdiner-title-2>
-
-<div class="table">
-<bento />
-<plate />
-<bento />
-</div>
-
-<not-element-just-cssdiner-answer-2 class="Select-the-bento-boxes A">bento</not-element-just-cssdiner-answer-2>
-
-
-
-
-
-```
+              <?=$article4["body"]?>
               </script>
               <div class="toast-ui-viewer"></div>
             </div>
