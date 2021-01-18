@@ -22,47 +22,21 @@ require_once "head.php";
     <div class="con">
       <div class="article-list-box">
         <ul>
-          <li>
-            <h1><a href="article_detail_1.ssghtml.php"><?=$article1["title"]?></a></h1>
-            <div><?=$article1["year"]?></div>
+         <?php for ( $i =4; $i >=1; $i-- ){?>
+        <?php
+        $articleVarName = "article" . $i;
+        $article = $$articleVarName;
+        ?>
+        <li>
+        <h1 class="article-list-box_title"><a href="article_detail_<?=$article["id"]?>.ssghtml.php"><?=$article["title"]?></a></h1>
+            <div><?=$article["year"]?></div>
             <script type="text/x-template">
-            <?=$article1["body"]?>
+            <?=$article["body"]?>
             </script>
             <div class="toast-ui-viewer"></div>
-          </li>
-          <li>
-            <h1><a href="article_detail_2.ssghtml.php"><?=$article2["title"]?></a></h1>
-            <div><?=$article2["year"]?></div>
-            <div>
-              <script type="text/x-template">
-              <?=$article2["body"]?>
-              </script>
-              <div class="toast-ui-viewer"></div>
-            </div>
-          </li>
-
-          <li>
-            <h1 class="title"><?=$article3["title"]?></h1>
-            <div class="reg-date"><?=$article3["year"]?></div>
-            <div class="body">
-              <script type="text/x-template">
-              <?=$article3["body"]?>
-              </script>
-              <div class="toast-ui-viewer"></div>
-            </div>
-          </li>
-          <li>
-            <h1 class="title"><?=$article4["title"]?></h1>
-            <div class="reg-date"><?=$article4["year"]?></div>
-            <div class="body">
-              <script type="text/x-template">
-              <?=$article4["body"]?>
-              </script>
-              <div class="toast-ui-viewer"></div>
-            </div>
-          </li>
-        
-        </ul>
+        </li>        
+        <?php } ?>
+       </ul>
       </div>
     </div>
   </section>

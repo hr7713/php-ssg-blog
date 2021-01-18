@@ -3,6 +3,7 @@ $siteTitle="디자이너";
 
 
 $article4 = [];
+$article4["id"] = 4;
 $article4["year"] = "2021";
 $article4["title"] = "2화, CSS DINER";
 $article4["body"] = <<<EOT
@@ -59,6 +60,7 @@ $article4["body"] = <<<EOT
 EOT;
 
 $article3=[];
+$article3["id"] = 3;
 $article3["year"]="2021";
 $article3["title"]="1화, CSS DINER";
 $article3["body"]=<<<EOT
@@ -94,6 +96,7 @@ $article3["body"]=<<<EOT
 EOT;
 
 $article2=[];
+$article2["id"] = 2;
 $article2["year"]="2021";
 $article2["title"]="자바스크립트 사용법";
 $article2["body"]=<<<EOT
@@ -110,6 +113,7 @@ EOT;
 
 
 $article1=[];
+$article1["id"] = 1;
 $article1["year"]="2021";
 $article1["title"]="자바스크립트 사용법";
 $article1["body"]=<<<EOT
