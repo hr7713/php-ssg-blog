@@ -368,3 +368,8 @@ a {
   margin-top:20px;
 }
 /*게시물 댓글 박스 끝 */
+
+.article-list-box__title>a{
+  font-size:1;
+  text-decoration:underline;
+}

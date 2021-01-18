@@ -16,9 +16,9 @@ require_once "head.php";
 </h1>
 </section>
 
-<section class="section-article-detail con-min-width">
+<section class="section-article-detail padding-0-10 con-min-width">
   <div class="con">
-  <h1><a href="article_detail_2.ssghtml.php"><?=$selectedArticle["title"]?></a></h1>
+  <h1 class="article-list-box__title"><a href="article_detail_2.ssghtml.php"><?=$selectedArticle["title"]?></a></h1>
             <div><?=$selectedArticle["year"]?></div>
             <div>
               <script type="text/x-template">
@@ -29,7 +29,7 @@ require_once "head.php";
   </div>
 </section>
 
-<section class="section-article-reply-box con-min-width">
+<section class="section-article-reply-box padding-0-10 con-min-width">
   <div class="con">
     <div id="disqus_thread"></div>
 <script>
