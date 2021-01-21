@@ -396,3 +396,7 @@ a {
   font-size:1;
   text-decoration:underline;
 }
+
+.article-list-box_title>a:hover{
+  color:yellowgreen;
+}
