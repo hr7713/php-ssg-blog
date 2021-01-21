@@ -387,6 +387,11 @@ a {
 }
 /*게시물 댓글 박스 끝 */
 
+.article-list-box_title>a{
+  font-size:1;
+  text-decoration:underline;
+}
+
 .article-list-box__title>a{
   font-size:1;
   text-decoration:underline;
