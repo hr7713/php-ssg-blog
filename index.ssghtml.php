@@ -3,6 +3,7 @@ require_once "data.php";
 require_once "head.php";
 ?>
 
+<link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/index.css">
 <script src="js/index.js" defer></script>
 
