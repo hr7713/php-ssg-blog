@@ -79,6 +79,7 @@ function adaptForStatic($distFileName) {
 
 $originFiles = getFiles();
 
+@rename("docs/CNAME", "CNAME");
 deleteDirectory("docs");
 
 foreach ( $originFiles as $index => $originFile ) {
