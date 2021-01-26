@@ -1,12 +1,16 @@
 <?php
+require_once "util.php";
+require_once "app.php";
+
 $siteTitle="디자이너";
 
 
 $article4 = [];
 $article4["id"] = 4;
-$article4["year"] = "2021";
+$article4["regDate"] = "2021-01-11";
 $article4["title"] = "2화, CSS DINER";
-$article4["body"] = <<<EOT
+$article4["tags"] = ["CSS DINER", "CSS"];
+$article4["body"] = <<<'EOT'
 # 선택자 #id | A B | #id A
 ```html
 3.
@@ -61,9 +65,10 @@ EOT;
 
 $article3=[];
 $article3["id"] = 3;
-$article3["year"]="2021";
+$article3["regDate"] = "2021-01-11";
 $article3["title"]="1화, CSS DINER";
-$article3["body"]=<<<EOT
+$article3["tags"] = ["CSS DINER", "CSS"];
+$article3["body"]=<<<'EOT'
 # 선택자 A
 ```html
 1.
@@ -97,9 +102,10 @@ EOT;
 
 $article2=[];
 $article2["id"] = 2;
-$article2["year"]="2021";
+$article2["regDate"] = "2021-01-10";
 $article2["title"]="자바스크립트 사용법";
-$article2["body"]=<<<EOT
+$article2["tags"] = ["HTML", "JS"];
+$article2["body"]=<<<'EOT'
 # HTML h1 사용법
 ```codepen
 https://codepen.io/hr7713/embed/GRjYRGG?height=500&theme-id=light&default-tab=html,result
@@ -114,9 +120,10 @@ EOT;
 
 $article1=[];
 $article1["id"] = 1;
-$article1["year"]="2021";
+$article1["regDate"] = "2021-01-10";
 $article1["title"]="자바스크립트 사용법";
-$article1["body"]=<<<EOT
+$article1["tags"] = ["HTML", "JS"];
+$article1["body"]=<<<'EOT'
 # 자바스크립트 사용법
 ```html
 <<!--REPLACE:script-->>
@@ -126,7 +133,37 @@ var a =10;
 
 EOT;
 
-if ( isset($articleId) ) {
-    $articleVarName = "article" . $articleId;
-    $selectedArticle = $$articleVarName;
+
+
+// 데이터 정리
+$maxArticleId = getMaxArticleId();
+
+$_allArticles = [];
+$_tags = [];
+
+for ( $i = $maxArticleId; $i > 0; $i-- ) {
+    $varName = 'article' . $i;
+
+    if ( isset($$varName) ) {
+        $_allArticles[${$varName}['id']] = &$$varName;
+
+        foreach ( $_allArticles[${$varName}['id']]['tags'] as $tag ) {
+            $_tags[] = $tag;
+        }
+    }
+}
+
+$_tags = array_unique($_tags);
+sort($_tags);
+
+$_allArticlesByTag = [];
+
+foreach ( $_tags as $tag ) {
+    $_allArticlesByTag[$tag] = [];
+
+    foreach ( $_allArticles as $article ) {
+        if ( in_array($tag, $article['tags']) ) {
+            $_allArticlesByTag[$tag][$article['id']] = $article;
+        }
+    }
 }
