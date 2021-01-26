@@ -9,7 +9,7 @@ $article4 = [];
 $article4["id"] = 4;
 $article4["regDate"] = "2021-01-11";
 $article4["title"] = "2화, CSS DINER";
-$article4["tags"] = ["CSS DINER", "CSS"];
+$article4["tags"] = ["CSSDINER", "CSS"];
 $article4["body"] = <<<'EOT'
 # 선택자 #id | A B | #id A
 ```html
@@ -67,7 +67,7 @@ $article3=[];
 $article3["id"] = 3;
 $article3["regDate"] = "2021-01-11";
 $article3["title"]="1화, CSS DINER";
-$article3["tags"] = ["CSS DINER", "CSS"];
+$article3["tags"] = ["CSSDINER", "CSS"];
 $article3["body"]=<<<'EOT'
 # 선택자 A
 ```html
