@@ -90,3 +90,5 @@ foreach ( $originFiles as $index => $originFile ) {
 
     compile($originFile);
 }
+
+@rename("CNAME", "docs/CNAME");
