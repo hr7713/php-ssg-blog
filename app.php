@@ -91,6 +91,74 @@ function &getArticles() {
     return $_allArticles;
 }
 
+function &getForPrintTagInfo($tag) {
+    global $siteTitle;
+    global $siteThumbUrl;
+    global $tagInfos;
+
+    $tagInfo = [];
+
+    if ( isset($tagInfos[$tag]) ) {
+        $tagInfo = $tagInfos[$tag];
+    }
+
+    if ( !isset($tagInfo['pageThumbUrl']) ) {
+        $tagInfo['pageThumbUrl'] = $siteThumbUrl;
+    }
+
+    if ( !isset($tagInfo['pageTitle']) ) {
+        $tagInfo['pageTitle'] = "{$tag} 관련 글 리스트";
+    }
+
+    if ( !isset($tagInfo['pageDescription']) ) {
+        $tagInfo['pageDescription'] = "{$tag} 관련 글 리스트입니다.";
+    }
+
+    if ( !isset($tagInfo['pageKeywordsStr']) ) {
+        $tagInfo['pageKeywordsStr'] = "{$tag}";
+    }
+
+    return $tagInfo;
+}
+
+function &getForPrintArticleById($id) {
+    global $siteTitle;
+    global $siteThumbUrl;
+
+    $article = &getArticleById($id);
+    $tagInfo = &getForPrintTagInfo($article['tags'][0]);
+
+    if ( !isset($article['pageTitle']) ) {
+        $article['pageTitle'] = $tagInfo['pageTitle'];   
+    }
+    
+    if ( !isset($article['pageThumbUrl']) ) {
+        $article['pageThumbUrl'] = $tagInfo['pageThumbUrl'];
+    }
+
+    if ( !isset($article['pageDescription']) ) {
+        $article['pageDescription'] = getSummaryFromMarkdown($article['body']);
+    }
+
+    if ( !isset($article['pageKeywordsStr']) ) {
+        $article['pageKeywordsStr'] = implode(', ', $article['tags']);
+    }
+
+    return $article;
+}
+
+function getSummaryFromMarkdown($markdownSource) {
+    $summary = str_replace("#### ", " ", $markdownSource);
+    $summary = str_replace("### ", " ", $summary);
+    $summary = str_replace("## ", " ", $summary);
+    $summary = str_replace("# ", " ", $summary);
+    $summary = preg_replace('/<[^<]+?>/', ' ', $summary);
+    $summary = str_replace("\n", " ", $summary);
+    $summary = preg_replace('!\s+!', ' ', $summary);
+
+    return trim($summary);
+}
+
 function &getArticleById($id) {
     $articles = &getArticles();
 
