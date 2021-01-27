@@ -10,13 +10,11 @@ $siteThumbUrl = "https://hr7713.github.io/web-res/blog/img/main.png";
 
 // 태그정보 시작
 $tagInfos = [
-    "CSS" => [
+    "flex" => [
         "pageThumbUrl" => "https://hr7713.github.io/web-res/blog/img/cssdiner.png",
-        "pageDescription" => "css 선택자 프로그램, cssdiner 관련 강좌 입니다."
+        //"pageDescription" => "css 선택자 프로그램, cssdiner 관련 강좌 입니다."
     ],
-    "CSSDINER" => [
-        "pageThumbUrl" => "https://hr7713.github.io/web-res/blog/img/cssdiner.png"
-    ]
+   
 ];
 // 태그정보 끝
 
