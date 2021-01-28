@@ -59,9 +59,13 @@ function compileItem($originFileAndOpt, $distFile) {
         mkdir($distDirPath, 0777, true);
     }
 
-    $command = "c:\\xampp\\php\\php.exe {$originFileAndOpt} > {$distFile}";
-
-    shell_exec($command);
+    if ( strpos($distFile, ".html") !== false ) {
+        $command = "c:\\xampp\\php\\php.exe {$originFileAndOpt} > {$distFile}";
+        shell_exec($command);
+    }
+    else {
+        copy($originFileAndOpt, $distFile);
+    }
 
     adaptForStatic($distFile);
 
