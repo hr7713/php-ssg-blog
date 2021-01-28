@@ -10,11 +10,10 @@ $siteThumbUrl = "https://hr7713.github.io/web-res/blog/img/main.png";
 
 // 태그정보 시작
 $tagInfos = [
-    "flex" => [
-        "pageThumbUrl" => "https://hr7713.github.io/web-res/blog/img/cssdiner.png",
-        //"pageDescription" => "css 선택자 프로그램, cssdiner 관련 강좌 입니다."
-    ],
-   
+  "CSS" => [
+    "pageThumbUrl" => "https://hr7713.github.io/web-res/blog/img/cssdiner.png",
+    //"pageDescription" => "css 선택자 프로그램, cssdiner 관련 강좌 입니다."
+  ],
 ];
 // 태그정보 끝
 
@@ -23,7 +22,7 @@ $article4 = [];
 $article4["id"] = 4;
 $article4["regDate"] = "2021-01-11";
 $article4["title"] = "2화, CSS DINER";
-$article4["tags"] = ["CSSDINER", "CSS"];
+$article4["tags"] = ["CSS", "CSSDINER"];
 $article4["body"] = <<<'EOT'
 # 선택자 #id | A B | #id A
 ```html
