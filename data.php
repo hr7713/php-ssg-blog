@@ -17,41 +17,19 @@ $tagInfos = [
 ];
 // 태그정보 끝
 
-
-$article4 = [];
-$article4["id"] = 4;
-$article4["regDate"] = "2021-01-11";
-$article4["title"] = "2화, CSS DINER";
-$article4["tags"] = ["CSS", "CSSDINER"];
-$article4["body"] = <<<'EOT'
-# 선택자 #id | A B | #id A
+$article5 = [];
+$article5["id"] = 5;
+$article5["regDate"] = "2021-01-12";
+$article5["title"] = "5화, CSS DINER";
+$article5["tags"] = ["CSS", "CSSDINER"];
+$article5["img"] = <<<'EOT'
+<img src="https://hr7713.github.io/web-res/cssdiner/img/05.gif" alt="">
+EOT;
+$article5["body"] = <<<'EOT'
+# 선택자 #id A
 ```html
-3.
-<not-element-just-cssdiner-title-3 class="Select-the-fancy-plate #id">하늘색 테두리 접시 1개 반응</not-element-just-cssdiner-title-3>
 
-<div class="table">
-<plate id="fancy" />
-<plate />
-<bento />
-</div>
-
-<not-element-just-cssdiner-answer-3 class="Select-the-fancy-plate #id">#fancy</not-element-just-cssdiner-answer-3>
-
-4.
-<not-element-just-cssdiner-title-4 class="Select-the-apple-on-the-plate A B">접시 위 사과 반응</not-element-just-cssdiner-title-4>
-
-<div class="table">
-<bento />
-<plate>
-  <apple />
-</plate>
-<apple />
-</div>
-
-<not-element-just-cssdiner-answer-4 class="Select-the-apple-on-the-plate A B">plate apple</not-element-just-cssdiner-answer-4>
-
-5.
-<not-element-just-cssdiner-title-5 class="Select-the-pickle-on-the-fancy-plate #id A">하늘색 테두리 접시 위 피클 반응</not-element-just-cssdiner-title-5>
+<question>Select the pickle on the fancy plate</question>
 
 <div class="table">
 <bento>
@@ -65,49 +43,62 @@ $article4["body"] = <<<'EOT'
 </plate>
 </div>
 
-<not-element-just-cssdiner-answer-5 class="Select-the-pickle-on-the-fancy-plate #id A">#fancy pickle</not-element-just-cssdiner-answer-5>
-
-
-
-
-
+<answer>#fancy pickle</answer>
 
 ```
 
 EOT;
 
-$article3=[];
+$article4 = [];
+$article4["id"] = 4;
+$article4["regDate"] = "2021-01-12";
+$article4["title"] = "4화, CSS DINER";
+$article4["tags"] = ["CSS", "CSSDINER"];
+$article4["img"] = <<<'EOT'
+<img src="https://hr7713.github.io/web-res/cssdiner/img/04.gif" alt="">
+EOT;
+$article4["body"] = <<<'EOT'
+# 선택자 A B 
+```html
+
+<question>Select the apple on the plate</question>
+
+<div class="table">
+<bento />
+<plate>
+  <apple />
+</plate>
+<apple />
+</div>
+
+<answer>plate apple</answer>
+
+```
+
+EOT;
+
+
+$article3 = [];
 $article3["id"] = 3;
 $article3["regDate"] = "2021-01-11";
-$article3["title"]="1화, CSS DINER";
-$article3["tags"] = ["CSSDINER", "CSS"];
-$article3["body"]=<<<'EOT'
-# 선택자 A
+$article3["title"] = "3화, CSS DINER";
+$article3["tags"] = ["CSS", "CSSDINER"];
+$article3["img"] = <<<'EOT'
+<img src="https://hr7713.github.io/web-res/cssdiner/img/03.gif" alt="">
+EOT;
+$article3["body"] = <<<'EOT'
+# 선택자 #id 
 ```html
-1.
-<not-element-just-cssdiner-title-1 class="Select-the-plates A">접시 2개 반응</not-element-just-cssdiner-title-1>
+
+<question>Select the fancy plate</question>
 
 <div class="table">
-<plate />
-<plate />
-</div>
-
-<not-element-just-cssdiner-answer-1 class="Select-the-plates A">plate</not-element-just-cssdiner-answer-1>
-
-2.
-<not-element-just-cssdiner-title-2 class="Select-the-bento-boxes A">도시락 박스 2개 반응</not-element-just-cssdiner-title-2>
-
-<div class="table">
-<bento />
+<plate id="fancy" />
 <plate />
 <bento />
 </div>
 
-<not-element-just-cssdiner-answer-2 class="Select-the-bento-boxes A">bento</not-element-just-cssdiner-answer-2>
-
-
-
-
+<answer>#fancy</answer>
 
 ```
 
@@ -115,36 +106,56 @@ EOT;
 
 $article2=[];
 $article2["id"] = 2;
-$article2["regDate"] = "2021-01-10";
-$article2["title"]="자바스크립트 사용법";
-$article2["tags"] = ["HTML", "JS"];
+$article2["regDate"] = "2021-01-11";
+$article2["title"]="2화, CSS DINER";
+$article2["tags"] = ["CSSDINER", "CSS"];
+$article2["img"] = <<<'EOT'
+<img src="https://hr7713.github.io/web-res/cssdiner/img/02.gif" alt="">
+EOT;
 $article2["body"]=<<<'EOT'
-# HTML h1 사용법
-```codepen
-https://codepen.io/hr7713/embed/GRjYRGG?height=500&theme-id=light&default-tab=html,result
-```
-```youtube
-OMBjyeSJLqY
+# 선택자 A
+```html
+
+<question>Select the bento boxes</question>
+
+<div class="table">
+<bento />
+<plate />
+<bento />
+</div>
+
+<answer>bento</answer>
+
 ```
 
 EOT;
-
-
 
 $article1=[];
 $article1["id"] = 1;
-$article1["regDate"] = "2021-01-10";
-$article1["title"]="자바스크립트 사용법";
-$article1["tags"] = ["HTML", "JS"];
+$article1["regDate"] = "2021-01-11";
+$article1["title"]="1화, CSS DINER";
+$article1["tags"] = ["CSSDINER", "CSS"];
+$article1["img"] = <<<'EOT'
+<img src="https://hr7713.github.io/web-res/cssdiner/img/01.gif" alt="">
+EOT;
 $article1["body"]=<<<'EOT'
-# 자바스크립트 사용법
+# 선택자 A
 ```html
-<<!--REPLACE:script-->>
-var a =10;
-</<!--REPLACE:script-->>
-<div class="a"></div>
+
+<question>Select the plates</question>
+
+<div class="table">
+<plate />
+<plate />
+</div>
+
+<answer>plate</answer>
+
+```
 
 EOT;
+
+
 
 
 

@@ -32,9 +32,13 @@ require_once "head.php";
   <div class="con">
   <h1 class="article-list-box__title"><?=$selectedArticle["title"]?></h1>
             <div><?=$selectedArticle["regDate"]?></div>
+            
             <div>
+            <div><?=$selectedArticle["img"]?></div>
               <script type="text/x-template">
+              
               <?=$selectedArticle["body"]?>
+              
               </script>
               <div class="toast-ui-viewer"></div>
             </div>
