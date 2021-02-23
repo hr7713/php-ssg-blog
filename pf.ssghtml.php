@@ -14,6 +14,7 @@ require_once "head.php";
     </span>
     <span>PORFOLIO</span>
 </h1>
+
 </section>
 
 <?php
